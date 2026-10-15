@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: scms-grade-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: scms
+      POSTGRES_PASSWORD: scms_learning_only
+      POSTGRES_DB: scms_reference
+    ports:
+      - "127.0.0.1:55434:5432"
+    volumes:
+      - scms_grade_postgres_data:/var/lib/postgresql/data
+      - ./sql/reference:/docker-entrypoint-initdb.d:ro
+      - ./tests:/scms-tests:ro
+volumes:
+  scms_grade_postgres_data:

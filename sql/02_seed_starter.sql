@@ -1,0 +1,4 @@
+-- Fictional sample data only. Build this after completing the starter schema.
+-- TODO: Add Grade 10/11/12, academic years, students, teachers, subjects,
+-- teaching assignments, and a small number of student subject grades.
+-- Use example.com addresses and follow parent-before-child FK order.
